@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login Page</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f5f5;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header{
+            width:100%;
+            background:#0066ff;
+            padding:12px 0;
+            position:sticky;
+            top:0;
+            z-index:1000;
+            box-shadow:0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .navbar{
+            width:92%;
+            max-width:1200px;
+            margin:auto;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+
+        .navbar img{
+            width:60px;
+            height:60px;
+            border-radius:50%;
+        }
+
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:25px;
+        }
+
+        .nav-links li a{
+            text-decoration:none;
+            color:white;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        .nav-links li a:hover{
+            color:#ffeb3b;
+        }
+
+        /* Hamburger */
+        .hamburger{
+            font-size:35px;
+            color:white;
+            cursor:pointer;
+            display:none;
+            user-select:none;
+        }
+
+        #menu-toggle{
+            display:none;
+        }
+
+        /* Mobile Navbar */
+        @media (max-width:768px){
+            .hamburger{
+                display:block;
+            }
+
+            .nav-links{
+                position:absolute;
+                top:80px;
+                right:-100%;
+                width:230px;
+                background:#0066ff;
+                flex-direction:column;
+                padding:20px 0;
+                text-align:center;
+                transition:0.3s ease;
+                box-shadow:-5px 5px 20px rgba(0,0,0,0.3);
+            }
+
+            #menu-toggle:checked ~ .nav-links{
+                right:0;
+            }
+        }
+
+        /* ---------------- LOGIN BOX ---------------- */
+        .login-container{
+            width:90%;
+            max-width:400px;
+            background:white;
+            padding:30px;
+            margin:50px auto;
+            border-radius:12px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .login-container h2{
+            text-align:center;
+            color:#333;
+            margin-bottom:20px;
+        }
+
+        label{
+            font-weight:bold;
+            color:#444;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-top:5px;
+            margin-bottom:20px;
+            border:1px solid #aaa;
+            border-radius:6px;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        input:focus{
+            border-color:#0066ff;
+            box-shadow:0 0 8px rgba(0,102,255,0.4);
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#0066ff;
+            border:none;
+            color:white;
+            font-size:18px;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#004fcc;
+            transform:scale(1.03);
+        }
+
+        .forgot{
+            display:block;
+            text-align:right;
+            margin-top:-10px;
+            margin-bottom:15px;
+            color:#0066ff;
+            text-decoration:none;
+            font-size:14px;
+        }
+
+        .forgot:hover{
+            text-decoration:underline;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+        footer{
+            background:#0066ff;
+            color:white;
+            padding:40px 0 15px 0;
+            margin-top:40px;
+        }
+
+        .footer-container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            display:flex;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            gap:20px;
+        }
+
+        .footer-box{
+            width:30%;
+            min-width:250px;
+            text-align:center;
+        }
+
+        .footer-box img{
+            width:70px;
+            height:70px;
+            border-radius:50%;
+        }
+
+        .copy{
+            text-align:center;
+            font-size:14px;
+            margin-top:20px;
+            opacity:0.9;
+        }
+
+        @media (max-width:768px){
+            .footer-box{
+                width:100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ---------------- HEADER ---------------- -->
+    <header>
+        <nav class="navbar">
+            <img src="./image/image.webp" alt="Logo">
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Contect.html">Contact</a></li>
+                <li><a href="./Register.html">Register</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ---------------- LOGIN BOX ---------------- -->
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form>
+            <label>Username</label>
+            <input type="text" required placeholder="Enter username">
+
+            <label>Password</label>
+            <input type="password" required placeholder="Enter password">
+
+            <a href="#" class="forgot">Forgot Password?</a>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- ---------------- FOOTER ---------------- -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>📞 Contact</h3>
+                <p>8115716862</p>
+                <h3>Email</h3>
+                <p>abhishekprajapati@gmail.com</p>
+            </div>
+
+            <div class="footer-box">
+                <img src="./image/prajapati.jpg" alt="">
+                <h3>👨‍💻 Developer</h3>
+                <p>Abhishek Prajapati</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>📍 Address</h3>
+                <p>JSS ITI, Palahi Patti, Varanasi</p>
+            </div>
+
+        </div>
+
+        <p class="copy">© 2025 All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

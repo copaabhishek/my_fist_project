@@ -1,0 +1,214 @@
+/* ================== RESET =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+/* ================== NAVBAR =================== */
+.navbar {
+    background: brown;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    flex-grow: wrap;
+     top: 0;
+     left: 0;
+    z-index: 100;
+    width: 100%;
+   
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffdd00;
+}
+
+/* ---------- MOBILE MENU ---------- */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background: #0d6efd;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        transition: 0.4s;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* ================== HERO IMAGE =================== */
+.hero-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* ================== MAIN SECTION =================== */
+.main-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.video-box video,
+.map-box iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+
+    
+
+
+
+ /* Mobile Menu */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        transition: 0.4s ease;
+    }
+
+    .nav-links.show {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+/* -------- HERO -------- */
+.hero {
+    height: 350px;
+    background: url("./image/neha.jpg") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 10px #000;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* -------- FOOTER -------- */
+footer {
+    background: linear-gradient(135deg, #001f3f, #003f7f);
+    color: #fff;
+    padding: 40px 0 20px;
+    margin-top: 20px;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-box {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-box img {
+    width: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.footer-box h3 {
+    color: #00eaff;
+    margin-bottom: 8px;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-box {
+        width: 100%;
+    }
+}
+

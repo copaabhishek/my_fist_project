@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header & Footer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    body{
+        margin:0;
+        padding:0;
+        background:#f2f2f2;
+        font-family:Arial, sans-serif;
+    }
+
+    /* CONTAINER */
+    .container {
+        width: 90%;
+        max-width: 420px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 25px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border-radius: 12px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #ff5500;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+        font-size: 15px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: 0.3s;
+    }
+
+    input:focus, select:focus {
+        border-color: #ff5500;
+        outline: none;
+        box-shadow: 0 0 6px rgba(255, 85, 0, 0.3);
+    }
+
+    .btn-group {
+        text-align: center;
+    }
+
+    button {
+        width: 45%;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+        transition: 0.3s;
+    }
+
+    .submit-btn {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .reset-btn {
+        background-color: #e63946;
+        color: white;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 480px){
+        button{
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./image/image.webp" alt="">
+                
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Contect.html">Contact</a></li>
+                <li><a href="./Register.html">Register</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+     <div class="container">
+        <h2>Student Form</h2>
+
+        <form>
+            <label>Student Name</label>
+            <input type="text" name="studentName" required>
+
+            <label>Roll Number</label>
+            <input type="number" name="rollNumber" required>
+
+            <label>Class</label>
+            <select name="class" required>
+                <option value="">Select Class</option>
+                <option>1st</option>
+                <option>2nd</option>
+                <option>3rd</option>
+                <option>4th</option>
+                <option>5th</option>
+            </select>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <div class="btn-group">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div>
+
+     <!-- ---------------- FOOTER ---------------- -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>📞 Contact</h3> 
+                <p>8115716862</p><br>
+                <h3>Email Id  </h3>
+                <p>abhishekprajapati@gmail.com</p>
+            </div>
+
+            <div class="footer-box">
+                <img src="./image/prajapati.jpg" alt="">
+                <h3>👨‍💻 Developer By</h3>
+                <p>Abhishek Prajapati</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>📍 Address</h3>
+                <p>JSS ITI, Palahi Patti, Varanasi</p>
+            </div>
+
+        </div>
+
+        <p class="copy">© 2025 All Rights Reserved</p>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const navLinks = document.getElementById("nav-links");
+
+        menuBtn.onclick = () => {
+            navLinks.classList.toggle("show");
+            menuBtn.classList.toggle("active");
+        };
+    </script>
+
+</body>
+</html>
+
+
+   

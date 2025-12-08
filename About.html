@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ITI About</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background: #1e3a8a;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #ffcc00;
+}
+
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background: #f0f4ff;
+}
+
+.about-section h1 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+/* CONTENT BOX */
+.content-box {
+    padding: 30px 50px;
+}
+
+.content-box h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.content-box ul {
+    margin-left: 20px;
+    line-height: 30px;
+}
+
+/* COURSES */
+.courses {
+    padding: 40px 50px;
+}
+
+.course-card {
+    background: #eef2ff;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 5px solid #1e3a8a;
+}
+
+.course-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #1e3a8a;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px){
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        background: #1e3a8a;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./image/image.webp" alt="">
+            <h2>JS ITI</h2>
+        </div>
+
+        <div class="menu-icon" id="menuBtn">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./About.html" class="active">About</a></li>
+            <li><a href="./Contect.html">Contact</a></li>
+            <li><a href="./Register.html">Register</a></li>
+            <li><a href="./login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ========== ABOUT SECTION ========== -->
+<section class="about-section">
+    <h1>About JS ITI Palahi Patti Varanasi</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Vitae dolor explicabo illum asperiores ipsum fuga qui? Nam saepe.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+</section>
+
+<!-- Mission -->
+<section class="content-box">
+    <h2>Our Mission</h2>
+    <ul>
+        <li>Provide excellent vocational education</li>
+        <li>Prepare students for govt. & private jobs</li>
+        <li>Promote skill development & self-employment</li>
+        <li>Develop trained manpower for industries</li>
+    </ul>
+</section>
+
+<!-- Why Choose -->
+<section class="content-box">
+    <h2>Why Choose JS ITI</h2>
+    <ul>
+        <li>Experienced and qualified trainers</li>
+        <li>Practical industry-based training</li>
+        <li>Well-equipped labs & classrooms</li>
+        <li>Soft skills & personality development</li>
+        <li>Placement assistance</li>
+    </ul>
+</section>
+
+<!-- Courses -->
+<section class="courses">
+    <h2>Courses Offered</h2>
+
+    <div class="course-card">
+        <h3>COPA (Computer Operator & Programming Assistant)</h3>
+        <ul>
+            <li>Basics of computer & MS Office</li>
+            <li>Web designing (HTML, CSS)</li>
+            <li>Networking fundamentals</li>
+            <li>Internet & Email</li>
+        </ul>
+    </div>
+
+    <div class="course-card">
+        <h3>Electrician</h3>
+        <ul>
+            <li>Electrical wiring & installation</li>
+            <li>Motors and transformers</li>
+            <li>Safety & measuring instruments</li>
+            <li>Commercial & residential work</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Training Method -->
+<section class="content-box">
+    <h2>Training Method</h2>
+    <ul>
+        <li>Classroom teaching with practical labs</li>
+        <li>Live demonstrations & hands-on training</li>
+        <li>Industrial visits & real projects</li>
+        <li>Skill testing & project-based learning</li>
+    </ul>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+    <p>© 2025 JS ITI Palahi Patti Varanasi | All Rights Reserved</p>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.onclick = () => {
+        navLinks.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header & Footer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./image/image.webp" alt="">
+                
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Contect.html">Contact</a></li>
+                <li><a href="./Register.html">Register</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= CONTENT ================= -->
+    <section class="hero">
+        <img src="./image/neha.jpg" class="hero-img">
+    </section>
+
+    <section class="main-section">
+        <div class="video-box">
+            <video controls autoplay loop muted>
+                <source src="./video/What is Firmware With Full Information – [Hindi] – Quick Support - Quick Support (360p, h264).mp4">
+            </video>
+        </div>
+
+        <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.3458485976576!2d82.95221073783259!3d25.460124621098135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2a599218b8d5%3A0xc58ffc64489326c0!2sJ.S.%20Private%20Industrial%20Training%20Institute%20PalhiPatti%2C%20Varanasi%20221208!5e0!3m2!1sen!2sin!4v1765110065765!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+            </iframe>
+        </div>
+    </section>
+    
+    <!-- ---------------- FOOTER ---------------- -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>📞 Contact</h3> 
+                <p>8115716862</p><br>
+                <h3>Email Id  </h3>
+                <p>abhishekprajapati@gmail.com</p>
+            </div>
+
+            <div class="footer-box">
+                <img src="./image/prajapati.jpg" alt="">
+                <h3>👨‍💻 Developer By</h3>
+                <p>Abhishek Prajapati</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>📍 Address</h3>
+                <p>JSS ITI, Palahi Patti, Varanasi</p>
+            </div>
+
+        </div>
+
+        <p class="copy">© 2025 All Rights Reserved</p>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const navLinks = document.getElementById("nav-links");
+
+        menuBtn.onclick = () => {
+            navLinks.classList.toggle("show");
+            menuBtn.classList.toggle("active");
+        };
+    </script>
+
+</body>
+</html>
+
+
+   
